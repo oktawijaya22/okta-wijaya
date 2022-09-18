@@ -1,0 +1,80 @@
+Deklarasi :
+mm, p, bp, sp : integer
+hrg : double
+diskon, pjk, th, byr : float
+Deskripsi :
+Begin 
+Pilihan 
+Write ( MENU MAKANAN )
+Write ( Masukkan Pilihan Anda )
+Input ( mm ) 
+Read ( mm ) 
+If ( mm <= 0 ) OR ( mm > 3 ) then 
+Write ( Menu tdk ada ) 
+goto ( Pilihan ) 
+end if 
+Pilihan2 
+Write ( PORSI ) 
+Write ( Masukkan Pilihan Anda ) 
+Input ( p ) 
+Read ( p ) 
+If ( p <= 0 ) OR ( p > 3 ) then 
+Write ( Porsi tdk ada ) 
+goto ( Pilihan2 ) 
+end if (19)
+write ( Banyak Pesanan Anda ) 
+input ( bp ) 
+read ( bp ) 
+Pilihan3 
+Write ( Status Pesanan ) 
+Write ( Masukkan Pilihan Anda )
+Input ( sp ) 
+Read ( sp )
+If ( sp <= 0 ) OR ( sp > 3 ) then 
+Write ( status pesanan tdk ada )
+goto ( Pilihan3 ) 
+end if 
+if ( mm == 1 ) then 
+if ( p == 1 ) then 
+hrg  15000 
+else if ( p == 2 ) then 
+hrg  20000 (35)
+else (36)
+hrg  25000 (37)
+end if (38)
+if ( mm == 2 ) then 
+if ( p == 1 ) then 
+hrg  30000 
+else if ( p == 2 ) then 
+hrg  40000 
+else
+hrg  50000 
+end if
+else
+if ( mm == 2 ) then 
+if ( p == 1 ) then 
+hrg  30000 
+else if ( p == 2 ) then 
+hrg  40000 
+else 
+hrg  50000 
+end if 
+th  bp*hrg 
+if ( sp == 1 ) then 
+pjk  10/100. *th 
+else 
+pjk  0 
+end if 
+if ( mm == 2 ) AND ( p == 3 ) then 
+diskon  5./100 *th 
+else (64)
+diskon  0 
+end if 
+byr  th – diskon + pjk 
+write (pesan)
+write (pilih kurir)
+write ( Total Harga ) 
+write ( Diskon ) 
+write ( Pajak ) 
+write ( Bayar ) 
+End 
